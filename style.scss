@@ -1,6 +1,49 @@
+$outer-margin: 1rem;
+$inner-margin: 3rem;
+
 /********************************************************************************************************
 Layout Rules
 *********************************************************************************************************/
 
 // Small View
 
+div.page-wrapper {
+  margin: $outer-margin;
+
+  section div, div div {
+    margin-bottom: $inner-margin;
+  }
+}
+
+section.intro {
+  header, div.summary {
+    text-align: center;
+  }
+  div.summary::after {
+    content: "";
+  }
+}
+
+div.main {
+  div.benefits::after {
+    content: "";
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+aside.sidebar {
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+}
+
+// Large View
+
+@media only screen and (min-width: 46.8em) {
+  
+}
