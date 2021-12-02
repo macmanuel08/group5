@@ -1,0 +1,14 @@
+//headings
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+//body
+@import url('https://fonts.google.com/css2?family=Noto+Sans+Display:wght@300;400&display=swap');
+
+$serif : 'Libre Baskerville', Georgia, serif;
+$sans-serif : 'Noto Sans Display', Verdana, sans-serif;
+
+body h1,h2,h3 {
+    font-family: $serif;
+& p {
+    font-family: $sans-serif;
+}
+}
