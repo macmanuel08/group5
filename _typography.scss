@@ -1,13 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Display:wght@300;400&display=swap');
-
-$heading : 'Libre Baskerville', Georgia, serif;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Display:wght@300;400&display=swap');
+$title :'Cinzel Decorative', Georgia, serif;
+$heading-text : 'Libre Baskerville', Georgia, serif;
 $body-text : 'Noto Sans Display', Verdana, sans-serif;
 
 body {
-& h1,h2,h3 {
+& h3 {
     font-family: $heading-text;
 }
 & p {
     font-family: $body-text;
 }
 }
+
+header h1,h2 {
+    font-family: $title;
+}
+
+aside {
+    & h3 {
+        font-family: $heading-text;
+    }
+    & p {
+        font-family: $body-text;
+    }
+    }
+    
