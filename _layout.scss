@@ -8,7 +8,7 @@ $column-width: 25rem;
 // Small View
 
 div.page-wrapper {
-  margin: $outer-margin;
+  padding: $outer-margin;
 
   section div, div div, footer {
     margin-bottom: $inner-margin;
