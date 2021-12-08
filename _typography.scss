@@ -20,8 +20,12 @@ aside {
     & h3 {
         font-family: $heading-text;
     }
-    & p {
+    & a {
         font-family: $body-text;
     }
     }
+
+.design-selection::before {
+    font-family: $title;
+}
     
