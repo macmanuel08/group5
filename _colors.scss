@@ -152,22 +152,19 @@ header::after {
 .summary p {
     color: $white;
 }
-/*
 
 #zen-supporting {
 background: linear-gradient(34deg, rgba(238,211,222,1) 0%, rgba(197,212,253,1) 24%, rgba(160,161,197,1) 100%);
 }
-*/
 
 .explanation {
+    width: 100%;
     margin: 0  3%;
     margin-top: 2rem;
     background: $white-gray;
     padding: 50px;
     position: relative;
     z-index: 3;
-    border-left: 2rem solid $lavender;
-    border-right: 2rem solid $lavender;
     &::after {
         content:'';
         display: block;
