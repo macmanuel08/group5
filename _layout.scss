@@ -119,7 +119,7 @@ aside.sidebar {
       text-align: left;
       display: grid;
       grid-template-columns: 2fr repeat(2, 1fr);
-      grid-column-gap: $inner-margin;
+      grid-column-gap: $outer-margin;
     }
   }
 }
