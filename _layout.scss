@@ -8,7 +8,6 @@ $column-width: 25rem;
 // Small View
 
 div.page-wrapper {
-  margin: $outer-margin;
 
   section div, div div, footer {
     margin-bottom: $inner-margin;
@@ -19,15 +18,9 @@ section.intro {
   header, div.summary {
     text-align: center;
   }
-  div.summary::after {
-    content: ""; // placeholder for background image
-  }
 }
 
 div.main {
-  div.benefits::after {
-    content: ""; // placeholder for background image
-  }
   footer {
     display: flex;
     justify-content: center;
@@ -126,6 +119,7 @@ aside.sidebar {
       text-align: left;
       display: grid;
       grid-template-columns: 2fr repeat(2, 1fr);
+      grid-column-gap: $inner-margin;
     }
   }
 }
