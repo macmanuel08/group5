@@ -154,7 +154,8 @@ header::after {
 }
 
 #zen-supporting {
-background: linear-gradient(34deg, rgba(238,211,222,1) 0%, rgba(197,212,253,1) 24%, rgba(160,161,197,1) 100%);
+    background: rgb(238,211,222);
+    background: linear-gradient(225deg, rgba(238,211,222,1) 0%, rgba(238,235,213,1) 18%, rgba(249,239,200,1) 100%);
 }
 
 .explanation {
@@ -178,6 +179,8 @@ background: linear-gradient(34deg, rgba(238,211,222,1) 0%, rgba(197,212,253,1) 2
 
 
 .participation {
+background: white;
+//flowers
 &::before {
     content: "";
     display: block;
