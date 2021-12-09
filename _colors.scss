@@ -1,4 +1,4 @@
-$white-gray : #f5f5f5;
+$white-gray : #f5f3f6;
 $white: #ffffff;
 $gray :#8182b1;
 $black : #060B23;
@@ -17,7 +17,6 @@ $sheer-background : rgba(255,255,255,0.28);
     width: 6rem;
     height: 2rem;
    border-radius: 50%;
-   margin: 0 auto;
 }
 .page-wrapper p {
     color: $black;
@@ -83,38 +82,38 @@ header::after {
     0 -3rem 3px 2px rgb(244, 217, 96);
     margin: 0 auto;
 }
+//cloud1
+&::after {
+    @include cloud;
+    float: right;
+    box-shadow: 1rem -2.4rem 1px 16px $white, -3.5rem -1.5rem 0 8px $white;
+    margin: 4rem;
+    }
 }
 
-//cloud1
 .summary p:last-of-type {
     &::before {
     @include cloud;
-   box-shadow: 1rem 2.4rem 1px 16px #ffffff, 3.5rem 1.5rem 0 8px #ffffff;
- 
-    }
-
-    &::after{
-    @include cloud;
-    box-shadow: 1rem -2.4rem 1px 16px #ffffff, -3.5rem -1.5rem 0 8px #ffffff;
+    float: left;
+    box-shadow: 1rem 2.4rem 1px 16px $white, 3.5rem 1.5rem 0 8px $white;
         }
-/*
+
 //cloud2
 &::after {
     content:'';
     display: block;
     position: relative;
-    z-index: 0;
+    float: right;
     width: 16px;
     height: 10px;
     border-radius: 50%;
-    box-shadow: 2rem -3rem 0 28px $lavender,
-    3rem -5.25rem 0 24px $lavender,
-    5rem -2rem 0 26px $lavender,
-    6rem -5rem 0 26px $lavender,
-    8rem -3.5rem 0 28px $lavender;
-    margin: 0 auto;
+    box-shadow: 8rem -6rem 0 28px $white,
+    9rem -8.25rem 0 24px $white,
+    10rem -5rem 0 26px $white,
+    11rem -8rem 0 26px $white,
+    13rem -6.5rem 0 28px $white;
 }
-*/
+
 }
 
 .preamble {
@@ -129,11 +128,12 @@ header::after {
     display: block;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -2;
     background: $white-gray;
     width: 200px;
     height: 600px;  
 }
+
 //baloons
 & h3::after {
     content:'';
@@ -143,8 +143,8 @@ header::after {
     height: 20px;
     border-radius: 50%;
     box-shadow: 3rem -3rem 2px 12px $pink,
-    4rem -5rem 2px 20px rgb(238, 227, 181),
-    6rem -3rem 2px 14px rgb(244, 217, 96);
+    4rem -5rem 0px 20px rgb(238, 227, 181),
+    6rem -3rem 0px 14px rgb(244, 217, 96);
     margin: 0 auto;
 }
 }
@@ -158,15 +158,16 @@ header::after {
 background: linear-gradient(34deg, rgba(238,211,222,1) 0%, rgba(197,212,253,1) 24%, rgba(160,161,197,1) 100%);
 }
 */
+
 .explanation {
     margin: 0  3%;
     margin-top: 2rem;
     background: $white-gray;
-    padding-bottom: 50px;
+    padding: 50px;
     position: relative;
     z-index: 3;
     border-left: 2rem solid $lavender;
-    border-right: 2rem solid $pink;
+    border-right: 2rem solid $lavender;
     &::after {
         content:'';
         display: block;
@@ -180,7 +181,7 @@ background: linear-gradient(34deg, rgba(238,211,222,1) 0%, rgba(197,212,253,1) 2
 }
 
 
-.participation p:first-of-type {
+.participation {
 &::before {
     content: "";
     display: block;
@@ -189,28 +190,41 @@ background: linear-gradient(34deg, rgba(238,211,222,1) 0%, rgba(197,212,253,1) 2
     overflow: hidden;
     width: 42px;
     height: 68px;
-    background: $blue;
     border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-    box-shadow:  0 0 2px $blue, 1.1rem -0.2rem 0 2px rgb(205, 218, 253), -0.8rem -0.4rem 0 1px rgb(205, 218, 253),
-     -7rem 5.4rem 0 2px rgb(244, 217, 96), -7.8rem 5.2rem 0 1px rgb(248, 220, 95), -6rem 5rem 0 1px rgb(248, 220, 95), 
-     -12rem 12rem 0 4px $lavender, -13.1rem 12.2rem 0 4px $lavender, -11rem 12.4rem 0 4px $lavender,
-     -21rem 8.4rem 0 2px $pink, -21.8rem 8.2rem 0 1px $pink, -20rem 8rem 0 1px $pink, 
-     ;
+    box-shadow:  -43.2rem 2rem 2px #eed3de, -42.5rem 2.2rem 0 2px #f8e0e9, -44rem 2.4rem 0 1px #f8e0e9, 
+    -50.8rem -2.2rem 0 0.2px #c5d4fd, -51.8rem -2.2rem 0 0.2px #cddafd, -50rem -2rem 0 0.2px #cddafd, 
+    -56rem 7.4rem 0 2px #c5d4fd, -55.1rem 7.2rem 0 2px #cddafd, -57rem 7.4rem 0 2px #cddafd,
+    -48rem 12.4rem 0 2px #f4d960, -48.8rem 12.2rem 0 1px #f8dc5f, -47rem 12rem 0 1px #f8dc5d, 
+    -66rem 8.4rem 0 2px #f4d960, -66.8rem 8.2rem 0 1px #f8dc5f, -65rem 8rem 0 1px #f8dc5d, 
+    -61.5rem 19.2rem 0 4px #eed3de, -60.3rem 19rem 0 4px #f8e0e9, -62.5rem 19rem 0 4px #f8e0e9, 
+    -72.2rem 28rem 0 2px #c5d4fd, -73.5rem 28.2rem 0 2px #cddafd, -71rem 28.4rem 0 1px #cddafd;
 
 }
 
 &::after {
     content: "";
-    display: block;
+   // display: block;
     position: relative;
     width: 1px;
     height: 80px;
     border-radius: 50%;
-    box-shadow: 1.5rem -8rem 0 4px darkcyan;
-    margin: 0 -8rem;
-
+    //-2.5rem -10rem 0 4px darkcyan, -9.5rem -14.5rem 0 4px #004444, -14.9rem -5.6rem 0 4px #002727, -6.5rem -2.5rem 0 4px darkcyan,-24.5rem .5rem 0 4px #004444,-19.5rem 7rem 0 4px darkcyan
+}
 }
 
+.participation p:nth-of-type(3) {
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        margin: auto -8rem;
+        overflow: hidden;
+        width: 22px;
+        height: 88px;
+        border-radius: 50%/60%;
+        transform: rotate(315deg);
+        box-shadow: 1.5rem -10rem 0 2px green;
+    }
 }
 
 .benefits {
