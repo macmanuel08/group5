@@ -58,7 +58,8 @@ $link: #9a5a7b;
 
 .intro {
     background: rgb(238,211,222);
-    background: linear-gradient(326deg, rgba(238,211,222,1) 1%, rgba(197,212,253,1) 24%, rgba(160,161,197,1) 100%); 
+    background: linear-gradient(
+        0deg, #eed3de 0%, #c5d4fd 20%, #a0a1c5 100%);
     opacity: 0.96;
 }
 
@@ -67,7 +68,6 @@ header {
 
     & h1, & h2 {
         color: $white;
-        //text-shadow: #FC0 1px 0 10px;
         text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
     }
  & h2 {
@@ -98,13 +98,16 @@ header h2 {
     & a {
         color: $gray;
     }
+    & p {
+        text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    }
 }
 
 .summary p:last-of-type {
     position: relative;
     z-index: 3;
     margin-bottom: 0;
-//cloud1
+//clouds
 &::after {
     @include cloud;
     box-shadow: 2rem -28rem 10px 4px $clouds, 0 -26.5rem 10px 16px $clouds, -2rem -29.5rem 10px 12px $clouds,
@@ -125,19 +128,21 @@ header h2 {
     padding: 20px 50px;
 
 //baloons
-& h3::after {
+/*
+& h3::before {
     content:'';
     display: block;
     position: relative;
     width: 16px;
     height: 20px;
-    border-radius: 50%;
-    box-shadow: 13.5rem -3rem 0px 16px $babypink,
-    14.5rem -5rem 0px 24px rgb(238, 227, 181),
-    16rem -3rem 0px 20px rgb(244, 217, 96);
+    border-radius: 50%/60%;
+    box-shadow: 13.5rem 2.5rem 0px 16px $babypink,
+    16.5rem -3.5rem 0px 24px rgb(238, 227, 181),
+    16.5rem -3.5rem 0px 20px rgb(238, 227, 181, 0.6),
+    19rem 1.5rem 0px 20px rgb(244, 217, 96, 0.6);
     margin: 0 auto;
 }
-
+*/
 }
 
 .preamble p:last-of-type {
@@ -150,7 +155,7 @@ header h2 {
 
 #zen-supporting {
     background: rgb(238,211,222);
-    background: linear-gradient(225deg, rgba(238,211,222,1) 0%, rgba(238,235,213,1) 18%, rgba(249,239,200,1) 100%);
+    background: linear-gradient(180deg, rgba(238,211,222,1) 12%, rgba(249,239,200,1) 40%, rgba(207,216,243,1) 100%);
 }
 
 .explanation {
@@ -234,6 +239,7 @@ background: $sheer-background;
 }
 
 .benefits {
+    margin: 0 0.5%;
     background: $white;
 }
 
@@ -251,20 +257,27 @@ background: $sheer-background;
     padding-top: .5em;
     border-top: solid 20px $yellow;
     border-bottom: solid 20px $yellow;
-    border-right: solid 2px $yellow;
-    border-left: solid 2px $yellow;
+    border-right: solid 5px $yellow;
+    border-left: solid 5px $yellow;
+    color: $black;
 
     &::before {
         content: 'RECOMMEND';
         display: block;
         text-align: center;
     }
+
     & h3 {
         display: none;
     }
-    & a {
-        color: #7C6313;
+
+    & nav ul li {
         margin: .2rem;
+        //color: $black;
+    }
+    
+    & a {
+        color: $black;
     }
     & a:hover {
         color: $gold;
@@ -273,17 +286,30 @@ background: $sheer-background;
 
 aside {
     background: $lavender;
+    opacity: 0.96;
 & a {
     text-decoration: none;
-    color: $white;
 }
 }
 
 .archives {
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
     color: $white;
 }
 
 .resources {
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    color: $white;
+}
+
+.design-archives a {
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    color: $white;
+
+}
+
+.zen-resources a {
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
     color: $white;
 }
 
