@@ -20,7 +20,7 @@ body{
 
 div.page-wrapper {
 
-   div div, footer {
+   div div {
     margin-bottom: $inner-margin;
   }
 }
@@ -50,7 +50,7 @@ aside.sidebar {
 
 // Padding (inner)
 
-.preamble, .participation, .requirements, .design-selection, .benefits {padding: $outer-padding;}
+.preamble, .participation, .requirements, .design-selection, .benefits, .wrapper, footer {padding: $outer-padding;}
 
 // Large View
 
