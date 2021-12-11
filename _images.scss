@@ -9,3 +9,40 @@ header h2::after {
     margin: 0 auto;
     margin-top: 50px;
 }
+
+footer {
+    a {
+        width: 60px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    a.zen-validate-html {
+        &::before {
+            content: url(images/html.svg);
+        }
+    }
+
+    a.zen-validate-css {
+        &::before {
+            content: url(images/css.svg);
+        }
+    }
+
+    a.zen-license {
+        &::before {
+            content: url(images/cc.svg);
+        }
+    }
+
+    a.zen-accessibility {
+        &::before {
+            content: url(images/accessibility.svg);
+        }
+    }
+
+    a.zen-github {
+        &::before {
+            content: url(images/github.svg);
+        }
+    }
+}
