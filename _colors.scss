@@ -9,14 +9,13 @@ $blue: #C5D4FD; //rgba(197,212,253,1)
 $lavender : #A0A1C5;//rgba(160,161,197,1)
 $babypink: #e0bdcf; //rgba(238,211,222,1)
 $sheer-background : rgba(255,255,255,0.28);
-$link: #9a5a7b;
+$text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
 
 @mixin light {
     content:'';
     display: block;
     width: 16px;
     height: 20px;
-    box-shadow: 0 27rem 3px 5px #f7eab2, 0 24rem 3px 5px #f8e073, 0 21rem 3px 5px #f4d960;
     margin: 0 auto;
     position: relative;
 }
@@ -46,7 +45,7 @@ $link: #9a5a7b;
     content: "";
     position: relative;
     display: block;
-    background: $blue;
+    //background: $blue;
     width: 6rem;
     height: 2rem;
    border-radius: 50%;
@@ -57,7 +56,7 @@ $link: #9a5a7b;
 }
 
 .intro {
-    background: rgb(238,211,222);
+    background: rgba(238,211,222);
     background: linear-gradient(
         0deg, #eed3de 0%, #c5d4fd 20%, #a0a1c5 100%);
     opacity: 0.96;
@@ -68,7 +67,7 @@ header {
 
     & h1, & h2 {
         color: $white;
-        text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+        text-shadow: $text-shadow;
     }
  & h2 {
     margin-bottom: 0;
@@ -86,6 +85,8 @@ header {
 header h2 {
 &::before {
     @include light;
+    box-shadow: 0 22.5rem 2px 2px #f7eab2, 0 24.5rem 2px 2px #f8e073, 0 26.5rem 2px 2px #f4d960;
+
     }  
 }
 
@@ -99,7 +100,7 @@ header h2 {
         color: $gray;
     }
     & p {
-        text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+        text-shadow: $text-shadow;
     }
 }
 
@@ -275,7 +276,6 @@ background: $sheer-background;
         margin: .2rem;
         //color: $black;
     }
-    
     & a {
         color: $black;
     }
@@ -293,23 +293,23 @@ aside {
 }
 
 .archives {
-    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: $text-shadow;
     color: $white;
 }
 
 .resources {
-    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: $text-shadow;
     color: $white;
 }
 
 .design-archives a {
-    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: $text-shadow;
     color: $white;
 
 }
 
 .zen-resources a {
-    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: $text-shadow;
     color: $white;
 }
 
@@ -323,5 +323,19 @@ footer a {
 @media only screen and (min-width: 46.8em) {
     .preamble {
         margin: 0 30%;
+    }
+
+    header h2::before {
+        box-shadow: 0 21rem 3px 4px #f7eab2, 0 24rem 3px 4px #f8e073, 0 27rem 3px 4px #f4d960;
+    }
+
+    .summary p:last-of-type::after {
+            box-shadow: 3rem -22rem 10px 8px $clouds, 0 -20.5rem 10px 24px $clouds, -3rem -22.5rem 10px 16px $clouds,
+    25rem -10.4rem 10px 20px $clouds, 28.5rem -9.5rem 10px 16px $clouds, 24rem -8rem 10px 16px $clouds,
+        7.5rem 4rem 10px 18px $clouds,
+        9rem 2rem 10px 14px $clouds,
+        10rem 5rem 10px 16px $clouds,
+        12rem 1.5rem 10px 16px $clouds,
+        14rem 4.5rem 10px 18px $clouds;
     }
 }
