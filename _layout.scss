@@ -4,6 +4,11 @@ Layout Rules
 $outer-margin: 1rem;
 $inner-margin: 3rem;
 $column-width: 25rem;
+$outer-padding: 2rem;
+
+body{
+  width: 100%;
+}
 
 //mixin center 
 @mixin center {
@@ -23,6 +28,7 @@ div.page-wrapper {
 section.intro {
   header, div.summary {
     text-align: center;
+    justify-content: center;
   }
 }
 
@@ -41,6 +47,10 @@ aside.sidebar {
     padding-left: 0;
   }
 }
+
+// Padding (inner)
+
+.preamble, .participation, .requirements, .design-selection {padding: $outer-padding;}
 
 // Large View
 
@@ -71,6 +81,7 @@ aside.sidebar {
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
+      padding: 1rem;
   
       h3, p {
         text-align: right;
@@ -81,6 +92,7 @@ aside.sidebar {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: $inner-margin;
+      padding: 1rem;
 
       h3 {
         grid-column: 1 / -1;
@@ -128,5 +140,9 @@ aside.sidebar {
       grid-template-columns: 2fr repeat(2, 1fr);
       grid-column-gap: $inner-margin;
     }
+  }
+
+  .design-selection{
+    padding: 0.5rem;
   }
 }
