@@ -34,3 +34,45 @@ header::after {
     background: linear-gradient(0deg, #f7ff53 12%, #eed3de 100%);
   }
 }
+
+// Cloud Animations
+@media only screen and (max-width: 46.7em){
+    .summary p:last-of-type{
+        &::after{
+            overflow: hidden;
+            animation: move-small 15s linear infinite;
+        }
+    }
+    
+    @keyframes move-small{
+        0% {    transform: translateX(-50%);
+                opacity: 100%;}
+        25% {   opacity: 50%;}
+        50% {   transform: translateX(300%);
+                opacity: 100%;}
+        75% {   opacity: 50%;}
+        100%{   transform: translateX(-50%);
+                opacity: 100%;}
+    }
+}
+
+
+@media only screen and (min-width: 46.8em){
+    .summary p:last-of-type{
+        &::after{
+            overflow: hidden;
+            animation: move-large 25s linear infinite;
+        }
+    }
+    
+    @keyframes move-large{
+        0% {    transform: translateX(-100%);
+                opacity: 100%;}
+        25% {   opacity: 50%;}
+        50% {   transform: translateX(800%);
+                opacity: 100%;}
+        75% {   opacity: 50%;}
+        100%{   transform: translateX(-100%);
+                opacity: 100%;}
+    }
+}

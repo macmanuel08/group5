@@ -28,3 +28,7 @@ aside {
 .design-selection::before {
     font-family: $title;
 }
+
+.design-selection a {
+    font-family: $heading-text;
+}
