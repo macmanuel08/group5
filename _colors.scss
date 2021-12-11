@@ -10,11 +10,42 @@ $babypink: #DBC2CF; //rgba(238,211,222,1)
 $sheer-background : rgba(255,255,255,0.28);
 $link: #9a5a7b;
 
+@mixin light {
+    content:'';
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 20px;
+    box-shadow: 0 -60px 3px 7px #f7eab2, 0 -20px 3px 7px #f8e073, 0 20px 3px 7px #f4d960;
+    margin: 0 auto;
+}
+
+@mixin temple-top{
+    content:'';
+        display: block;
+        width: 60px;
+        height: 100px;
+        margin: 0 auto;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,211,222,1) 40%, rgba(219,194,207,1 ) 100%);
+}
+
+@mixin temple-head{
+    content:'';
+    display: block;
+    background: $white-gray;
+    width: 100px;
+    height: 150px;
+    border-left: 40px solid $white;
+    border-right: 40px solid $white;
+    border-radius: 5% 5% 0 0;
+    margin: 0 auto;
+}
+
 @mixin cloud {
     content: "";
     position: relative;
     display: block;
-    background: #ffffff;
+    background: $blue;
     width: 6rem;
     height: 2rem;
    border-radius: 50%;
@@ -32,91 +63,78 @@ $link: #9a5a7b;
 
 header {
     padding-top: 2rem;
+
     & h1, & h2 {
         color: $white;
         //text-shadow: #FC0 1px 0 10px;
         text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
     }
-}
-
-header h2 {
+ & h2 {
     margin-bottom: 0;
 }
-
-header::after {
-        content:'';
-        display: block;
-        width: 60px;
-        height: 100px;
-        margin: 0 auto;
-        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,211,222,1) 40%, rgba(219,194,207,1 ) 100%);
+&::before {
+    position: relative;
+    top: 220px;
+ }
+&::after {
+    @include temple-top;
 }
+}
+
+//h2::after angel moroni images ------
+header h2 {
+&::before {
+    @include light;
+    position: relative;
+    top: 400px;
+    }  
+}
+
+
 
 .summary {
     &::before {
-        content:'';
-        display: block;
-        background: $white-gray;
-        width: 100px;
-        height: 150px;
-        border-left: 40px solid $white;
-        border-right: 40px solid $white;
-        border-radius: 5% 5% 0 0;
-        margin: 0 auto;
-}
+        @include temple-head;
+    }
     & a {
         color: $gray;
     }
-}
+    /*
+    //cloud3
+    &::after {
 
-//lights
-.summary p:first-of-type{
-&::before {
-    content:'';
-    display: block;
-    position: relative;
-    width: 16px;
-    height: 20px;
-    box-shadow: 0 -9rem 3px 2px rgb(247, 234, 178),
-    0 -6rem 3px 2px  rgb(248, 224, 115),
-    0 -3rem 3px 2px rgb(244, 217, 96);
-    margin: 0 auto;
-}
-//cloud1
-&::after {
-    @include cloud;
-    float: right;
-    box-shadow: 1rem -2.4rem 1px 16px $white, -3.5rem -1.5rem 0 8px $white;
-    margin: 4rem;
-    //box-shadow: 3rem -11.4rem 8px 20px $white, 6rem -9.5rem 8px 8px $swhite, 2rem -9rem 8px 12px $white, 
-    //33rem -6.4rem 8px 20px #ffffff, 38rem -7.5rem 8px 10px #ffffff, 32rem -9rem 8px 12px #ffffff;
-    }
+        content:'';
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 10px;
+        border-radius: 50%;
+        box-shadow: 8rem -6rem 0 28px $white,
+        9rem -8.25rem 0 24px $white,
+        10rem -5rem 0 26px $white,
+        11rem -8rem 0 26px $white,
+        13rem -6.5rem 0 28px $white;
+            }
+
+           */
 }
 
 .summary p:last-of-type {
-    &::before {
-    @include cloud;  
-    box-shadow: 1rem 2.4rem 1px 16px $white, 3.5rem 1.5rem 0 8px $white;
-    //box-shadow: 33rem -6.4rem 8px 20px #ffffff, 38rem -7.5rem 8px 10px #ffffff, 32rem -9rem 8px 12px #ffffff;
-        }
-
-//cloud2
-&::after {
-    content:'';
-    display: block;
     position: relative;
-    float: right;
-    width: 16px;
-    height: 10px;
-    border-radius: 50%;
-    box-shadow: 8rem -6rem 0 28px $white,
-    9rem -8.25rem 0 24px $white,
-    10rem -5rem 0 26px $white,
-    11rem -8rem 0 26px $white,
-    13rem -6.5rem 0 28px $white;
+    z-index: 3;
+//cloud1
+&::after {
+    margin: 0 4rem;
+    @include cloud;
+    box-shadow: 2rem -28rem 10px 4px rgb(255,255,255,0.92), 0 -26.5rem 10px 16px rgb(255,255,255,0.92), -2rem -29.5rem 10px 12px rgb(255,255,255,0.92),
+    21rem -10.4rem 10px 20px #ffffff, 23.5rem -9.5rem 10px 16px #ffffff, 20rem -8rem 10px 16px #ffffff,
+        8rem 4rem 0 18px $white,
+        9rem 2.25rem 0 14px $white,
+        10rem 5rem 0 16px $white,
+        11rem 2rem 0 16px $white,
+        13rem 4.5rem 0 18px $white;
 }
-
-}
+    }
 
 .preamble {
     display: block;
@@ -124,6 +142,7 @@ header::after {
     z-index: 3;
     margin-bottom: 0;
 
+//temple
 &::before {
     content:'';
     display: block;
@@ -134,7 +153,7 @@ header::after {
     width: 200px;
     height: 600px;  
 }
-
+/*
 //baloons
 & h3::after {
     content:'';
@@ -143,11 +162,12 @@ header::after {
     width: 16px;
     height: 20px;
     border-radius: 50%;
-    box-shadow: 3rem -3rem 2px 12px $babypink,
-    4rem -5rem 0px 20px rgb(238, 227, 181),
-    6rem -3rem 0px 14px rgb(244, 217, 96);
+    box-shadow: 3rem -5rem 2px 12px $babypink,
+    4rem -7rem 0px 20px rgb(238, 227, 181),
+    6rem -5rem 0px 14px rgb(244, 217, 96);
     margin: 0 auto;
 }
+*/
 }
 
 .summary p {
