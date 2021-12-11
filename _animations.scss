@@ -9,31 +9,10 @@ header::after {
 
 @keyframes lightup {
   0% {
-    background: linear-gradient(0deg, #f8f8f8 0%, #eed3de 100%);
-  }
-  12% {
-    background: linear-gradient(0deg, #f8f8f8 0%, #eed3de 100%);
-  }
-  25% {
-    background: linear-gradient(0deg, #f8f8f8 0%, #eed3de 100%);
-  }
-  45% {
-    background: linear-gradient(0deg, #f7fc9b 1%, #eed3de 100%);
-  }
-  50% {
-    background: linear-gradient(0deg, #f7fc9b 3%, #eed3de 100%);
-  }
-  65% {
-    background: linear-gradient(0deg, #f7fd78 0%, #eed3de 100%);
-  }
-  75% {
-    background: linear-gradient(0deg, #f7fd78 8%,#eed3de 100%);
-  }
-  85% {
-    background: linear-gradient(0deg, #f7fd78 10%,#eed3de 100%);
+    background: linear-gradient(0deg, #f8f8f8 0%, #dbc2cf 80%);
   }
   100% {
-    background: linear-gradient(0deg, #f7fd78 12%, #eed3de 100%);
+    background: linear-gradient(0deg, #f7fd78 12%, #dbc2cf 100%);
   }
 }
 
