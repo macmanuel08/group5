@@ -55,6 +55,11 @@ aside.sidebar {
 // Large View
 
 @media only screen and (min-width: 46.8em) {
+  .page-wrapper {
+    max-width: 1200px;
+    margin: 2px auto;
+  }
+
   div.preamble {
     display: flex;
     flex-direction: column;
