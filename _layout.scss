@@ -4,6 +4,7 @@ Layout Rules
 $outer-margin: 1rem;
 $inner-margin: 3rem;
 $column-width: 25rem;
+$outer-padding: 2rem;
 
 // Small View
 
@@ -35,6 +36,10 @@ aside.sidebar {
     padding-left: 0;
   }
 }
+
+// Padding (inner)
+
+.preamble, .participation, .requirements, .design-selection {padding: $outer-padding;}
 
 // Large View
 
