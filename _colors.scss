@@ -126,7 +126,7 @@ header h2 {
 &::after {
     margin: 0 4rem;
     @include cloud;
-    box-shadow: 2rem -28rem 10px 4px rgb(255,255,255,0.92), 0 -26.5rem 10px 16px rgb(255,255,255,0.92), -2rem -29.5rem 10px 12px rgb(255,255,255,0.92),
+    box-shadow: 2rem -28rem 10px 4px rgba(255,255,255,0.92), 0 -26.5rem 10px 16px rgba(255,255,255,0.92), -2rem -29.5rem 10px 12px rgba(255,255,255,0.92),
     21rem -10.4rem 10px 20px #ffffff, 23.5rem -9.5rem 10px 16px #ffffff, 20rem -8rem 10px 16px #ffffff,
         8rem 4rem 0 18px $white,
         9rem 2.25rem 0 14px $white,
