@@ -4,7 +4,7 @@ $temple-spire-color: linear-gradient(
   180deg, white 0%, #eed3de 40%, #dbc2cf 100%);
 
 header::after {
-  animation: lightup 15s linear infinite alternate-reverse;
+  animation: lightup 15s linear infinite alternate;
 }
 
 @keyframes lightup {
@@ -30,10 +30,10 @@ header::after {
     background: linear-gradient(0deg, #f7fd78 8%,#eed3de 100%);
   }
   85% {
-    background: linear-gradient(0deg, #f7ff53 10%,#eed3de 100%);
+    background: linear-gradient(0deg, #f7fd78 10%,#eed3de 100%);
   }
   100% {
-    background: linear-gradient(0deg, #f7ff53 12%, #eed3de 100%);
+    background: linear-gradient(0deg, #f7fd78 12%, #eed3de 100%);
   }
 }
 
