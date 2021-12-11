@@ -5,11 +5,17 @@ $outer-margin: 1rem;
 $inner-margin: 3rem;
 $column-width: 25rem;
 
+//mixin center 
+@mixin center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 // Small View
 
 div.page-wrapper {
 
-  section div, div div, footer {
+   div div, footer {
     margin-bottom: $inner-margin;
   }
 }
@@ -42,6 +48,8 @@ aside.sidebar {
   div.preamble {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    @include center;
 
     h3, p {
       width: $column-width;
@@ -52,9 +60,7 @@ aside.sidebar {
     div.explanation, div.benefits {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      @include center;
       h3, p {
         width: $column-width;
       }
