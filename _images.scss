@@ -10,7 +10,7 @@
 }
 
 header h2::after {
-    @include statue
+    @include statue;
 }
 
 footer {
