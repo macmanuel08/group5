@@ -50,7 +50,7 @@ aside.sidebar {
 
 // Padding (inner)
 
-.preamble, .participation, .requirements, .design-selection {padding: $outer-padding;}
+.preamble, .participation, .requirements, .design-selection, .benefits {padding: $outer-padding;}
 
 // Large View
 
@@ -63,7 +63,6 @@ aside.sidebar {
   div.preamble {
     display: flex;
     flex-direction: column;
-    width: 100%;
     @include center;
 
     h3, p {
