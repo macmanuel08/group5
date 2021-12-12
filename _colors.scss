@@ -2,7 +2,7 @@ $white-gray : #f5f3f6;
 $white: #ffffff;
 $clouds: rgba(255,255,255,0.94);
 $gray :#8182b1;
-$black : #402633;//#060B23;
+$black : #402633;
 $yellow : #E5C559;
 $gold: #C29C1E;
 $blue: #C5D4FD; //rgba(197,212,253,1)
@@ -127,23 +127,6 @@ header h2 {
     background: $white-gray;
     margin: 0 3%;
     padding: 20px 50px;
-
-//baloons
-/*
-& h3::before {
-    content:'';
-    display: block;
-    position: relative;
-    width: 16px;
-    height: 20px;
-    border-radius: 50%/60%;
-    box-shadow: 13.5rem 2.5rem 0px 16px $babypink,
-    16.5rem -3.5rem 0px 24px rgb(238, 227, 181),
-    16.5rem -3.5rem 0px 20px rgb(238, 227, 181, 0.6),
-    19rem 1.5rem 0px 20px rgb(244, 217, 96, 0.6);
-    margin: 0 auto;
-}
-*/
 }
 
 .preamble p:last-of-type {
@@ -199,21 +182,7 @@ background: $sheer-background;
     -61.5rem 21.2rem 0 4px #f5b3cd, -60.3rem 21rem 0 4px #f8aac9, -62.5rem 21rem 0 4px #f8aac9, 
     -72.2rem 31rem 0 6px #cddafd, -73.5rem 30.8rem 0 4px #c5d4fd, -71rem 31.2rem 0 4px #c5d4fd;
 }
-/*
-//leaves
-&::after {
-    content: "";
-        display: block;
-        position: relative;
-        margin: auto -8rem;
-        overflow: hidden;
-        width: 22px;
-        height: 88px;
-        border-radius: 50%/60%;
-        transform: rotate(-20deg);
-    box-shadow: 1.5rem -10rem 0 2px darkcyan;
-}
-*/
+
 & a {
     color: $gray;
 }
@@ -274,7 +243,7 @@ background: $sheer-background;
 
     & nav ul li {
         margin: .2rem;
-        //color: $black;
+        color: $black;
     }
     & a {
         color: $black;
